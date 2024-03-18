@@ -1,3 +1,30 @@
+## Prerequisites
+Install foundry via [the documentation](https://book.getfoundry.sh/getting-started/installation)
+
+## Steps
+
+### Copy the environment variables
+```
+cp <.env.andromeda OR .env.sepolia> .env
+```
+
+> [!NOTE]
+>  
+> `RUST_LOG` is set to `trace`, which adds a lot of verbosity, but it's necessary to extract the transaction hash from the logs.
+
+### Insert your private key in the env file
+```
+export RPC_URL="https://andromeda.metis.io/?owner=1088"
+export PRIVATE_KEY="0x"
+```
+
+
+### Deploy the contract
+Run:
+```
+forge create NFT --rpc-url=$RPC_URL --private-key=$PRIVATE_KEY --constructor-args Test TEST --legacy
+```
+
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
