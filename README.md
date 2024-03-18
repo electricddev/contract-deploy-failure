@@ -22,7 +22,7 @@ export PRIVATE_KEY="0x"
 ### Deploy the contract
 Run:
 ```
-forge create NFT --rpc-url=$RPC_URL --private-key=$PRIVATE_KEY --constructor-args Test TEST --legacy
+forge create VestingVault --rpc-url=$RPC_URL --private-key=$PRIVATE_KEY --legacy
 ```
 
 ## Foundry
